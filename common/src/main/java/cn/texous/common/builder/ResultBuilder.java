@@ -8,7 +8,7 @@ import cn.texous.common.constants.TexousResult;
  * @author liuxiaohua
  * @since 2018/8/17 22:50
  */
-public class ResultBuilder<T extends TexousResult> {
+public class ResultBuilder<T extends TexousResult> implements BaseBuilder {
 
     private T result;
 
@@ -31,6 +31,7 @@ public class ResultBuilder<T extends TexousResult> {
         return this;
     }
 
+    @Override
     public T build() {
         return this.result;
     }
