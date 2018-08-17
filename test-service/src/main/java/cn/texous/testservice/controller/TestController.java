@@ -1,5 +1,6 @@
 package cn.texous.testservice.controller;
 
+import cn.texous.common.constants.TexousResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping("/getName")
-    public String getName() {
+    public TexousResult getName() {
         System.out.println("getName: 8002");
-        return "dddd";
+        return TexousResult.ok();
     }
 
 }
