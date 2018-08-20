@@ -16,7 +16,7 @@ public class TestController {
     @GetMapping("/getName")
     public TexousResult getName() {
         System.out.println("getName: 8002");
-        return TexousResult.ok();
+        return TexousResult.ok("你是谁");
     }
 
 }
