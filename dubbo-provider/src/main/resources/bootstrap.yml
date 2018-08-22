@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: dubbo-provider
+      profile: dev
+      label: master
+      uri: http://localhost:7010/
