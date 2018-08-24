@@ -1,5 +1,8 @@
 package cn.texous.common.utils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * insert description here
  *
@@ -46,11 +49,34 @@ public class IPUtils {
         return IPStrSb.toString();
     }
 
-    public static void main(final String[] args) {
-        final String IPStr = "192.168.11.11";
-        System.out.println(getIPNum(IPStr));
+    /**
+     * 判断 IP 是否符合规范
+     * @param str
+     * @return
+     */
+    public static boolean isIp(String str) {
+        if (str == null)
+            return false;
 
-        final Long IPNum = 3232238347L;
+        if (str.length() < 7 || str.length() > 15 || "".equals(str)) {
+            return false;
+        }
+        /**
+         * 判断IP格式和范围
+         */
+        String rexp = "([1-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(\\.(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}";
+        Pattern pat = Pattern.compile(rexp);
+        Matcher mat = pat.matcher(str);
+        boolean ipAddress = mat.find();
+        return ipAddress;
+    }
+
+    public static void main(final String[] args) {
+        final String IPStr = "255.255.255.255";
+        System.out.println(getIPNum(IPStr));
+        System.out.println(Integer.MAX_VALUE);
+
+        final Long IPNum = 0L;
         System.out.println(getIPString(IPNum));
 
     }
