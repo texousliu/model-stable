@@ -25,6 +25,7 @@
         <module>../dubbo-provider</module>
         <module>../dubbo-consumer</module>
         <module>../config</module>
+        <module>../security_demo</module>
     </modules>
 
     <properties>
