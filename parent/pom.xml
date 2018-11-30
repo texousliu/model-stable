@@ -18,14 +18,11 @@
     </parent>
 
     <modules>
-        <module>../common</module>
-        <module>../eureka</module>
-        <module>../gateway</module>
         <module>../test-service</module>
         <module>../dubbo-provider</module>
         <module>../dubbo-consumer</module>
-        <module>../config</module>
         <module>../security_demo</module>
+        <module>../beetl_test</module>
     </modules>
 
     <properties>

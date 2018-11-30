@@ -1,7 +1,0 @@
-spring:
-  cloud:
-    config:
-      name: eureka
-      profile: sit
-      label: master
-      uri: http://localhost:7010/
